@@ -1,6 +1,7 @@
 # newman-reporter-testrail
 
-Improved TestRail reporter for Newman with test cases filtering capability, based on the original https://github.com/billylam/newman-reporter-testrail.
+Improved TestRail reporter for Newman with test cases filtering capability, reading options from reporterOption, added 'host' parameter.
+Based on the original https://github.com/billylam/newman-reporter-testrail.
 
 ## Installation
 
@@ -56,7 +57,8 @@ newman run my-collection.postman_collection.json -r testrail,cli
 ```
 
 Run newman test with the reporter option -r testrail
-newman run my-collection.postman_collection.json -r cli,testrail \
+```
+ newman run my-collection.postman_collection.json -r cli,testrail \
 --reporter-testrail-host 'https://testrail.domain.com' \
 --reporter-testrail-username 'username@domain.com' \
 --reporter-testrail-password 'password' \
@@ -64,3 +66,4 @@ newman run my-collection.postman_collection.json -r cli,testrail \
 --reporter-testrail-suiteId 'testrail_suite_id' \
 --reporter-testrail-title 'Automation run'  \
 --reporter-testrail-includeAll
+```
