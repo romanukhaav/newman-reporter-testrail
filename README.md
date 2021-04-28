@@ -45,10 +45,10 @@ You can use [direnv](https://github.com/direnv/direnv) to easily maintain direct
 You may also set some or all of these variables using bash exports or by declaring directly in the run command.
 
 ### Run newman with the reporter option
-
+Reporter option can be set as environment variables or from reporter options arguments
 `-r testrail`
 
-Example:
+Example for environment variables:
 
 ```
 TESTRAIL_DOMAIN=example.testrail.com TESTRAIL_USERNAME=exampleuser 
@@ -56,7 +56,7 @@ TESTRAIL_APIKEY=yourkey TESTRAIL_PROJECTID=99 TESTRAIL_TITLE="Dev-API Regression
 newman run my-collection.postman_collection.json -r testrail,cli
 ```
 
-Run newman test with the reporter option -r testrail
+Example for reporterOptions:
 ```
  newman run my-collection.postman_collection.json -r cli,testrail \
 --reporter-testrail-host 'https://testrail.domain.com' \
