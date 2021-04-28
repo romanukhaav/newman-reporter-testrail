@@ -1,10 +1,10 @@
 # newman-reporter-testrail
 
-TestRail reporter for Newman.
+Improved TestRail reporter for Newman with test cases filtering capability, based on the original https://github.com/billylam/newman-reporter-testrail.
 
 ## Installation
 
-`npm install newman-reporter-testrail --global`
+`npm install git+https://github.com/romanukhaav/newman-reporter-testrail.git -g`
 
 ## Usage
 
@@ -54,3 +54,13 @@ TESTRAIL_DOMAIN=example.testrail.com TESTRAIL_USERNAME=exampleuser
 TESTRAIL_APIKEY=yourkey TESTRAIL_PROJECTID=99 TESTRAIL_TITLE="Dev-API Regression" 
 newman run my-collection.postman_collection.json -r testrail,cli
 ```
+
+Run newman test with the reporter option -r testrail
+newman run my-collection.postman_collection.json -r cli,testrail \
+--reporter-testrail-host 'https://testrail.domain.com' \
+--reporter-testrail-username 'username@domain.com' \
+--reporter-testrail-password 'password' \
+--reporter-testrail-projectId 'testrail_project_id' \
+--reporter-testrail-suiteId 'testrail_suite_id' \
+--reporter-testrail-title 'Automation run'  \
+--reporter-testrail-includeAll
