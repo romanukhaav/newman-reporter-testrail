@@ -1,6 +1,11 @@
 # newman-reporter-testrail
 
-Improved TestRail reporter for Newman with test cases filtering capability, reading options from reporterOption, added 'host' parameter, added 'errors' logging mode 
+Improved TestRail reporter for Newman
+    - test cases filtering capability;
+    - reading options from reporterOption;
+    - added 'host' parameter;
+    - added 'errors' logging mode.
+
 Based on the original https://github.com/billylam/newman-reporter-testrail.
 
 ## Installation
